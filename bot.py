@@ -36,9 +36,9 @@ def run_bot():
     bot.run(data['TOKEN'])
 
 async def load_extension():
-    for filename in os.listdir('./cmds'):
+    for filename in os.listdir('./cog'):
         if filename.endswith('.py'):
-            await bot.load_extension(f'cmds.{filename[:-3]}')
+            await bot.load_extension(f'cog.{filename[:-3]}')
 
 asyncio.run(load_extension())
 if __name__ == "__main__":
